@@ -1,7 +1,7 @@
 {
-  "name": "workshop-functional-js",
+  "name": "workshop-ble-functional-js",
   "version": "1.0.0",
-  "description": "Workshop to learn basic functional programming in JavaScript.",
+  "description": "Workshop to learn functional programming in JavaScript with BLE (Bluetooth Low Energy) devices.",
   "main": "index.js",
   "scripts": {
     "start": "node index",
