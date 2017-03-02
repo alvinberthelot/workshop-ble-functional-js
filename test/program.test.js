@@ -9,7 +9,7 @@ describe('Function transformCheckpoint', function() {
     expect(transformCheckpoint()).to.be.false;
   });
 
-  it('Function transformCheckpoint with parameter should mutate input', function() {
+  it('Function transformCheckpoint with parameter should not mutate input and return new reference', function() {
     var input1 = {
       id: 'whataw0nd3rful1d',
       uuid: 'whataw0nd3rful1d',
@@ -44,8 +44,9 @@ describe('Function transformCheckpoint', function() {
       services: null,
       state: 'outofcontrol'
     };
-    transformCheckpoint(input1);
-    expect(input1).not.to.be.eql(input2);
+    expect(input1).to.be.eql(input2);
+    var input3 = transformCheckpoint(input1);
+    expect(input1).not.to.be.equal(input3);
   });
 
 });
