@@ -1,5 +1,4 @@
 let chalk = require('chalk');
-let _ = require('lodash');
 let noble = require('noble');
 
 let transformCheckpoint = require('./utilities').transformCheckpoint;
@@ -25,7 +24,8 @@ let run = () => {
   });
 
   noble.on('discover', peripheral => {
-    console.log('BLE DEVICE', peripheral);
+    // console.log('BLE DEVICE', peripheral);
+    showCheckpoint(transformCheckpoint(peripheral));
   });
 
 };

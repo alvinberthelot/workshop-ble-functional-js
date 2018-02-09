@@ -42,7 +42,7 @@ let showCheckpoint = (checkpoint, index) => {
 
 let showCheckpointProperty = (value, key) => {
   console.log(chalk.cyan(key.toUpperCase()), value);
-}
+};
 
 module.exports = {
   transformCheckpoint: transformCheckpoint,
